@@ -30,7 +30,15 @@ const Index = () => {
           onChange={(e) => setPass(e.target.value)}
         />
       </label>
-      <button className="btn w-96" onClick={() => SendReqCreateUser("/api/user", {nama: name, password: pass})}>
+      <button
+        className="btn w-96"
+        onClick={() =>
+          SendReqCreateUser("https://crud-steel-eight.vercel.app/api/user", {
+            nama: name,
+            password: pass,
+          })
+        }
+      >
         send
       </button>
     </div>
